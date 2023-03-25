@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html:focus-within {
+  scroll-behavior: smooth; }
+
+body {
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  color: #ecf2f8;
+  background-color: white; }
+
+img {
+  max-width: 100%; }
+
+main {
+  margin: 2rem;
+  height: 100%;
+  max-width: 35rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem; }
+  main .grid-item {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.4s ease-out; }
+    main .grid-item:hover {
+      transform: scale(1.02);
+      box-shadow: #7541c8 0px 8px 15px; }
+    main .grid-item-one {
+      background-color: #7541c8;
+      background-image: url("../images/bg-pattern-quotation.svg");
+      background-repeat: no-repeat;
+      background-position: top 3% right 12%; }
+      main .grid-item-one img {
+        border: 2px solid #ae90df; }
+    main .grid-item-two {
+      background: #48556a; }
+      main .grid-item-two img {
+        border: 2px solid #7687a2; }
+    main .grid-item-three {
+      color: #48556a; }
+      main .grid-item-three img {
+        border: 2px solid #7687a2; }
+    main .grid-item-four {
+      background: #19212e;
+      color: white; }
+      main .grid-item-four img {
+        border: 2px solid #9269d3; }
+    main .grid-item-five {
+      color: #48556a; }
+      main .grid-item-five img {
+        border: 2px solid #35445f; }
+    main .grid-item .wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem; }
+      main .grid-item .wrapper img {
+        border-radius: 50%; }
+      main .grid-item .wrapper .name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 1; }
+      main .grid-item .wrapper .verified {
+        font-size: 0.7rem;
+        opacity: 0.5; }
+    main .grid-item p {
+      opacity: 0.7; }
+
+@media (min-width: 900px) {
+  main {
+    max-width: 70rem;
+    grid-template-columns: repeat(4, 1fr); }
+    main .grid-item-one {
+      grid-column: span 2; }
+    main .grid-item-four {
+      grid-column: span 2; }
+    main .grid-item-five {
+      grid-column: 4;
+      grid-row: 1 / 3; } }
