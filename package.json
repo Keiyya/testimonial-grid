@@ -1,14 +1,17 @@
 {
-	"name": "testimonials-grid",
-	"version": "1.0.0",
-	"description": "Testimonial Grid",
-	"main": "index.js",
-	"scripts": {
-		"sass": "node-sass -w Sass/ -o dist/css/ --recursive"
-	},
-	"author": "Keiyya",
-	"license": "MIT",
-	"dependencies": {
-		"node-sass": "^8.0.0"
-	}
+  "name": "testimonials-grid",
+  "version": "1.0.0",
+  "description": "Testimonial Grid",
+  "main": "index.js",
+  "homepage": "https://a-keiyya.github.io/testimonial-grid",
+  "scripts": {
+    "sass": "node-sass -w Sass/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Keiyya",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^5.0.0",
+    "node-sass": "^8.0.0"
+  }
 }

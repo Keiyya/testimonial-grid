@@ -17,6 +17,9 @@ body {
   color: #ecf2f8;
   background-color: white; }
 
+h1 {
+  display: none; }
+
 img {
   max-width: 100%; }
 
