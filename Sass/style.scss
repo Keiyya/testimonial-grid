@@ -1,14 +1,137 @@
+@import 'config';
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html:focus-within {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	min-height: 100vh;
-	line-height: 1.5;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  color: $grayish-blue;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  margin: 2rem;
+  height: 100%;
+  max-width: 35rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+
+  .grid-item {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.4s ease-out;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: darken($moderate-violet, 0.1) 0px 8px 15px;
+    }
+
+    &-one {
+      background-color: $moderate-violet;
+      background-image: url('../images/bg-pattern-quotation.svg');
+      background-repeat: no-repeat;
+      background-position: top 3% right 12%;
+
+      img {
+        border: 2px solid lighten($moderate-violet, 20);
+      }
+    }
+
+    &-two {
+      background: $dark-grayish-blue;
+
+      img {
+        border: 2px solid lighten($dark-grayish-blue, 20);
+      }
+    }
+
+    &-three {
+      color: $dark-grayish-blue;
+
+      img {
+        border: 2px solid lighten($dark-grayish-blue, 20);
+      }
+    }
+
+    &-four {
+      background: $blackish-blue;
+      color: $white;
+
+      img {
+        border: 2px solid lighten($moderate-violet, 10);
+      }
+    }
+
+    &-five {
+      color: $dark-grayish-blue;
+
+      img {
+        border: 2px solid lighten($blackish-blue, 15);
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+
+      .verified {
+        font-size: 0.7rem;
+        opacity: 0.5;
+      }
+    }
+
+    p {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    max-width: 70rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    .grid-item-one {
+      grid-column: span 2;
+    }
+
+    .grid-item-four {
+      grid-column: span 2;
+    }
+
+    .grid-item-five {
+      grid-column: 4;
+      grid-row: 1 / 3;
+    }
+  }
 }

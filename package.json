@@ -1,13 +1,13 @@
 {
 	"name": "testimonials-grid",
 	"version": "1.0.0",
-	"description": "Testimonials Grid",
+	"description": "Testimonial Grid",
 	"main": "index.js",
 	"scripts": {
-		"sass": "node-sass -w scss/ -o dist/css/ --recursive"
+		"sass": "node-sass -w Sass/ -o dist/css/ --recursive"
 	},
 	"author": "Keiyya",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"node-sass": "^8.0.0"
 	}
